@@ -23,8 +23,29 @@ package com.miss.derrycopy.entity
 
 class HomeDataResponse {
 
+//    懒加载可以暂时不赋值
+    lateinit var data : Data
+//    需要给默认值
+    var errcode: Int = 0
+    lateinit var errmsg: String
+    var errdialog: Int = 0
 
-data class AdListBean(val image: String, val link: String)
+
+
+    data class Data(
+        val ad_list: List<AdListBean>,
+        val company_list: List<CompanyListBean>,
+        val news_list: List<NewListBean>
+    )
+
+
+    data class AdListBean(val image: String, val link: String)
+
+    data class CompanyListBean(val image: String, val link: String)
+
+    data class NewListBean(val title: String, val link: String)
+
+
 
 
 }

@@ -10,8 +10,8 @@ interface LoginPresenter : IBasePresenter {
 
     //  监听回调
     interface OnLoginListener{
-        fun loginSuccess(data: LoginRegisterResponse)
-        fun loginFail(errMsg: String)
+        fun loginSuccess(data: LoginRegisterResponse?)
+        fun loginFail(errMsg: String?)
     }
 
 }

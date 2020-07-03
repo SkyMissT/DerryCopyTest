@@ -4,9 +4,10 @@ import com.miss.derrycopy.entity.LoginRegisterResponse
 
 interface LoginView {
 
-    fun loginSuccess(data: LoginRegisterResponse)
+    fun loginSuccess(data: LoginRegisterResponse?)
 
-    fun loginFail(errorMsg: String)
+    fun loginFail(errorMsg: String?)
+
 
 
 }
